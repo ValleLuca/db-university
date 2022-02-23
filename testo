@@ -36,12 +36,12 @@
 
 7- Da quanti dipartimenti è composta l'università? (12)
 
-	SELECT COUNT(*) as Quanti_dipartimenti
+	SELECT COUNT(*) AS Quanti_dipartimenti
 	FROM `departments`
 
 8- Quanti sono gli insegnanti che non hanno un numero di telefono? (50)
 
-	SELECT COUNT(`phone`) as 'No_number'
+	SELECT COUNT(`phone`) AS 'No_number'
 	FROM `teachers`
 
 9- Contare quanti iscritti ci sono stati ogni anno
@@ -51,6 +51,10 @@
 	GROUP BY `anno`
 
 10- Contare gli insegnanti che hanno l'ufficio nello stesso edificio
+
+	SELECT COUNT(*) AS `num`, `office_address`
+	FROM `teachers`
+	GROUP BY `office_address`
 
 11- Calcolare la media dei voti di ogni appello d'esame
 
